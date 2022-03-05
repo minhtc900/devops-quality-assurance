@@ -5,7 +5,6 @@ provider "azurerm" {
   client_secret   = "BmLL.VkNoYdp~d7_Wge919nacW4ruO7ZyR"
   features {}
 }
-
 terraform {
   backend "azurerm" {
     resource_group_name  = "${var.resource_group}"
