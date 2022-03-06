@@ -1,17 +1,16 @@
 provider "azurerm" {
-  tenant_id       = "eb326955-4b8b-416f-a799-6a22255997c6"
-  subscription_id = "5071732c-4dd9-4ada-98a7-4e6599fde956"
-  client_id       = "bf554695-f684-4571-8cbc-125f154c7e8e"
-  client_secret   = "BmLL.VkNoYdp~d7_Wge919nacW4ruO7ZyR"
+  tenant_id       = "${var.tenant_id}"
+  subscription_id = "${var.subscription_id}"
+  client_id       = "${var.client_id}"
+  client_secret   = "${var.client_secret}"
   features {}
 }
-
 terraform {
   backend "azurerm" {
     resource_group_name  = "${var.resource_group}"
-    storage_account_name = "tstate2525"
+    storage_account_name = "tstate20578"
     container_name       = "tstate"
-    key                  = "z+5retTRAJdeTK29NARUjffAIst4i12NH1ea42+2ZtOgq9gOwTiMfafp7VZV50L5VkqcXqtNPS/H+ASthL1QMA=="
+    key                  = "PHjjMYGNHfh5bAUgCEjrJmeYuvefxZXcy7Ocn550sgQJgzddC3NgxHKpI+VtqriitTmgNwUET4RM+ASt6Z4wyA=="
   }
 }
 module "resource_group" {
