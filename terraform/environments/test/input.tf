@@ -6,7 +6,7 @@ variable "tenant_id" {default = "eb326955-4b8b-416f-a799-6a22255997c6"}
 
 # Resource Group/Location
 variable "location" {default = "eastus"}
-variable "resource_group" {default = "udacity-demo"}
+variable "resource_group" {default = "tstate"}
 variable "application_type" {default = "web"}
 
 # Network
