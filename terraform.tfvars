@@ -16,6 +16,6 @@ address_prefix_test = "10.5.1.0/24"
 
 # Storage
 storage_account_name = "tstate15315"
-container_name       = "tfstate"
-key                  = "tfstate.tfstate"
-access_key           = "Sf36YEuyvJyDuInrJ9KqpfIsPGK+xZEh13BVWnAjwbIySmf8h+VhG7a0DUOaZrx/LAhsAYyGVXDA+AStorDUmQ=="
+container_name       = "tstate"
+key                  = "tstate.tfstate"
+access_key           = "PHjjMYGNHfh5bAUgCEjrJmeYuvefxZXcy7Ocn550sgQJgzddC3NgxHKpI+VtqriitTmgNwUET4RM+ASt6Z4wyA=="
