@@ -130,7 +130,7 @@ stages:
                 - task: AzureWebApp@1
                   displayName: "Deploy Azure Web App"
                   inputs:
-                    azureSubscription: "Azure for Students"
+                    azureSubscription: "azurerm-sc"
                     appType: "webAppLinux"
                     appName: "qa-releases-AppService"
                     package: "$(Pipeline.Workspace)/drop-fakerestapi/$(Build.BuildId)-fakerestapi.zip"
