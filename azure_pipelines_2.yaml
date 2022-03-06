@@ -17,8 +17,9 @@ stages:
               script: |
                 ls /home/vsts/work/_temp/
           - task: TerraformInstaller@0
+            displayName: Install Terraform
             inputs:
-              terraformVersion: "latest"
+              terraformVersion: '0.13.5'
           - task: TerraformCLI@0
             displayName: "Terraform init"
             inputs:
