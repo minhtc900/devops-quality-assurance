@@ -63,8 +63,8 @@ stages:
         provider: 'azurerm'
         command: 'init'
         backendServiceArm: 'azurerm-sc'
-        backendAzureRmResourceGroupName: 'tstate'
-        backendAzureRmStorageAccountName: 'tstate15259'
+        backendAzureRmResourceGroupName: 'terraform-rg'
+        backendAzureRmStorageAccountName: 'tstate14653'
         backendAzureRmContainerName: 'tstate'
         backendAzureRmKey: 'terraform.tfstate'
         workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/test'
@@ -131,7 +131,7 @@ stages:
             displayName: Deploy Azure WebApp
             inputs:
               azureSubscription: 'azurerm-sc'
-              appName: 'lingchenzhu-webapi-AppService'
+              appName: 'minhtc900-webapi-AppService'
               appType: webApp
               package: $(Pipeline.Workspace)/drop-fakerestapi/fakerestapi-$(Build.BuildId).zip
               deploymentMethod: zipDeploy
@@ -345,8 +345,8 @@ stages:
         provider: 'azurerm'
         command: 'init'
         backendServiceArm: 'azurerm-sc'
-        backendAzureRmResourceGroupName: 'tstate'
-        backendAzureRmStorageAccountName: 'tstate18595'
+        backendAzureRmResourceGroupName: 'terraform-rg'
+        backendAzureRmStorageAccountName: 'tstate14653'
         backendAzureRmContainerName: 'tstate'
         backendAzureRmKey: 'terraform.tfstate'
         workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/test'
