@@ -1,7 +1,7 @@
 #!/bin/bash
 
 RESOURCE_GROUP_NAME=tstate
-STORAGE_ACCOUNT_NAME=tstate$RANDOM
+STORAGE_ACCOUNT_NAME=tstate86
 CONTAINER_NAME=tstate
 
 # Create resource group
