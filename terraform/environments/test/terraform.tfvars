@@ -16,10 +16,10 @@ address_space = ["10.5.0.0/16"]
 address_prefix_test = "10.5.1.0/24"
 
 # Storage
-storage_account_name = "tstate18595"
+storage_account_name = "tstate15259"
 container_name       = "tstate"
 key                  = "terraform.tfstate"
-access_key           = "n19m/7JnkHGSEyQJInMKx3dOSBUSH3VkqryMK3beFxyOkokPWTb5r+80c8+z9MpKlssSJYv8hOP0+AStLUXG7w=="
+access_key           = "xssNy81/uLeqt4BXs5bLt2mADRonlwc/uA95J+W14pJ6zWKgfTKWCPWM2J7cLkxD0OCbluQ/ryFk+AStOg8o2w=="
 ARM_CLIENT_ID="bf554695-f684-4571-8cbc-125f154c7e8e"
 ARM_CLIENT_SECRET="Pza0P0M~jkKMbmN3nEnwx08x2hRGi-uyf2"
 ARM_TENANT_ID="eb326955-4b8b-416f-a799-6a22255997c6"
