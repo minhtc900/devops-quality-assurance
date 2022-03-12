@@ -7,7 +7,7 @@ client_secret   = "Pza0P0M~jkKMbmN3nEnwx08x2hRGi-uyf2"
 # Resource Group/Location
 location = "eastus"
 resource_group = "tstate"
-application_type = "web"
+application_type = "web_minhtc900"
 
 # Network
 virtual_network_name = "udacityNetwork"
@@ -23,3 +23,7 @@ ARM_CLIENT_ID="bf554695-f684-4571-8cbc-125f154c7e8e"
 ARM_CLIENT_SECRET="Pza0P0M~jkKMbmN3nEnwx08x2hRGi-uyf2"
 ARM_TENANT_ID="eb326955-4b8b-416f-a799-6a22255997c6"
 ARM_ACCESS_KEY="/cynL0f8XG1W9FSVqMmWJfwo2Az5xhvkEn3TCw/frM3VuY3iUjR+rXOiC/zWVzQWD6tcnAsI3wrW+ASt+x1p0g=="
+
+#vm
+vm_admin_username = "adminuser"
+
