@@ -8,6 +8,7 @@ client_secret   = "Pza0P0M~jkKMbmN3nEnwx08x2hRGi-uyf2"
 location = "eastus"
 resource_group = "tstate"
 application_type = "web86"
+resource_type = "rg"
 
 # Network
 virtual_network_name = "udacityNetwork"
