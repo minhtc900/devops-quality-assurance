@@ -7,7 +7,7 @@ client_secret   = "Pza0P0M~jkKMbmN3nEnwx08x2hRGi-uyf2"
 # Resource Group/Location
 location = "eastus"
 resource_group = "tstate"
-application_type = "web86"
+application_type = "web"
 resource_type = "rg"
 
 # Network
