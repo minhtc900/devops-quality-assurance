@@ -1,6 +1,6 @@
 name: Azure Pipelines
 variables:
-  python.version: "3.7.6"
+  python.version: "3.9.1"
 stages:
   - stage: Provisioning
     jobs:
@@ -43,7 +43,11 @@ stages:
         displayName: Verify build environment (pre)                
 
 
+<<<<<<< HEAD
       - task: TerraformInstaller@0
+=======
+      - task: ms-devlabs.custom-terraform-tasks.custom-terraform-installer-task.TerraformInstaller@0
+>>>>>>> 36209654bc9e2d552740693936ad5e6e3b4b6c5b
         displayName: Install Terraform
         inputs:
           terraformVersion: '0.13.5'
@@ -130,7 +134,7 @@ stages:
                 - task: AzureWebApp@1
                   displayName: "Deploy Azure Web App"
                   inputs:
-                    azureSubscription: "Azure for Students"
+                    azureSubscription: "azurerm-sc"
                     appType: "webAppLinux"
                     appName: "qa-releases-AppService"
                     package: "$(Pipeline.Workspace)/drop-fakerestapi/$(Build.BuildId)-fakerestapi.zip"
