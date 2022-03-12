@@ -69,10 +69,6 @@ stages:
         backendAzureRmKey: 'terraform.tfstate'
         workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/test'
 
-    
-    - script: 'terraform force-unlock LOCK_ID '
-      displayName: Terraform unlock
-
     - task: TerraformTaskV1@0
       displayName: Terraform Apply
       inputs:
