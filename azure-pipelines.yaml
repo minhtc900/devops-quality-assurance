@@ -55,7 +55,7 @@ stages:
     - task: ms-devlabs.custom-terraform-tasks.custom-terraform-installer-task.TerraformInstaller@0
       displayName: Install Terraform
       inputs:
-        terraformVersion: '0.13.5'
+        terraformVersion: '2.46.0'
 
     - task: TerraformTaskV1@0
       displayName: Terraform Init
@@ -69,13 +69,17 @@ stages:
         backendAzureRmKey: 'terraform.tfstate'
         workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/test'
 
+    
+    - script: 'terraform force-unlock LOCK_ID '
+      displayName: Terraform unlock
+
     - task: TerraformTaskV1@0
       displayName: Terraform Apply
       inputs:
         provider: 'azurerm'
         command: 'apply'
         commandOptions: |
-          -auto-approve 
+          -auto-approve -lock=false
         workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/test'
         environmentServiceNameAzureRM: 'azurerm-sc'
 
