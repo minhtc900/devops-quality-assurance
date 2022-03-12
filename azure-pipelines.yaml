@@ -26,7 +26,7 @@ stages:
     - task: InstallSSHKey@0
       inputs:
         knownHostsEntry: 'known_hosts'
-        sshPublicKey: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCn6wutENkms2AHL2UUQcJlh2+qFBZRhYpSZ+tSRERAyedG3n4AtDDrgiNXdAYsuAa2AGWrvrcoYHDdyYXvxsXmVQu1cKgaKMnSqglD2TcZyPLLFr5aJ0BEegGUU9ddSMFUi/UsQ5nbtVm9To6Ke7b496PDBAp4fnorn8QJXEj9GguToKuiZFEpH1mxlunOcTDgkqB/RR+h63XwxO3hwaRs92L0BsqjzAeFA5tUAvG/nXQJ3gx9/FJ6Ny/cVmvyTj45ol7uFpx4EoR1nKyIa1aJrnsvqoSeYJXQQj/6eeaE0rpPE/0GrnZKPfGD0MF/aH8uzr/Rh5ZkZSJTYFL626ZXFHy3+1MDJ2T/YCn12vlP48RaAPgil3m5h8Pajw/RatedIuTH49OKlAdvNnSSoreI7cw+xWhyuSQWYKOKe/btmCJ2IEhSBV35d4r9vRDLgROo1FBUiUH+mIDkWi83bkOMEDo+OgkTU/d+YU8avdty3AE0xuHsry00FKneySRViak= minhtc900@Minhs-MacBook-Air.local'
+        sshPublicKey: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCgUXyOzj2Pk9qfkcn2WFJCQ6/GRFTg5dIlpRKg9u2pUyyfgkOHCUxWYRSz6heIlM3tnBuZZxRZt4ZUOd+9SOb2mrcJX1e4WUOFRP2KBxwvPyESYoe154eFXSttEL/k5ZRFovkGdotKvWZQnTRBP3PzMGr8J84UGNY65C75dn8FIysVzX4MVsO5ae5qzDjkc/92GppVygwVUg4gYhXULKnuD8faZdnCfSCNFYbE2OgEGsuFfU996irqWzSMGDKL4XjvJD1McCRgJbVXGAcSXRRPZ4HJ665fk3QASPcJ1JqBP1D+7qLyIBtUxTQYkULL2C8Iu4JnI3EM+ak+J9/BnYut minh@cc-34850b27-865459bcb7-2wd6f'
         sshKeySecureFile: 'udacity_azure'
 
     - bash: |
