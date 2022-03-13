@@ -1,13 +1,15 @@
 provider "azurerm" {
-  version = "=2.13.0"
+  tenant_id       = "${var.tenant_id}"
+  subscription_id = "${var.subscription_id}"
+  client_id       = "${var.client_id}"
+  client_secret   = "${var.client_secret}"
   features {}
 }
 terraform {
   backend "azurerm" {
     resource_group_name  = "${var.resource_group}"
-    storage_account_name = "tstate22739"
-    container_name       = "tstate"
-    key                  = "terraform.tfstate"
+    storage_account_name = "tstate9776"
+    container_name       = "terraform.tfstate"
   }
 }
 module "resource_group" {

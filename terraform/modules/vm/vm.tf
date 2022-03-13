@@ -21,7 +21,7 @@ resource "azurerm_linux_virtual_machine" "test" {
   network_interface_ids = [azurerm_network_interface.test.id]
   admin_ssh_key {
     username   = var.vm_admin_username
-    public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCn6wutENkms2AHL2UUQcJlh2+qFBZRhYpSZ+tSRERAyedG3n4AtDDrgiNXdAYsuAa2AGWrvrcoYHDdyYXvxsXmVQu1cKgaKMnSqglD2TcZyPLLFr5aJ0BEegGUU9ddSMFUi/UsQ5nbtVm9To6Ke7b496PDBAp4fnorn8QJXEj9GguToKuiZFEpH1mxlunOcTDgkqB/RR+h63XwxO3hwaRs92L0BsqjzAeFA5tUAvG/nXQJ3gx9/FJ6Ny/cVmvyTj45ol7uFpx4EoR1nKyIa1aJrnsvqoSeYJXQQj/6eeaE0rpPE/0GrnZKPfGD0MF/aH8uzr/Rh5ZkZSJTYFL626ZXFHy3+1MDJ2T/YCn12vlP48RaAPgil3m5h8Pajw/RatedIuTH49OKlAdvNnSSoreI7cw+xWhyuSQWYKOKe/btmCJ2IEhSBV35d4r9vRDLgROo1FBUiUH+mIDkWi83bkOMEDo+OgkTU/d+YU8avdty3AE0xuHsry00FKneySRViak= minhtc900@Minhs-MacBook-Air.local"
+    public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCzutxzZSsLr2xdnSfGk3NTA+wyL8V7GUPu3fw1/pTbOk1yukZgKpDOSyTONSbF8CIfgMwxHtK6ZTAjToNC2agA434tm/dzIa2yceqgiHP0Yc9yZG+P6FPOMzLdS+mi42uWirvidWkNRG2ePBpwH2aBfn6B4ca2XwBpHwyVrKFV0znvGfNpmtgiLJFlFdDgZEJqjpnCgCkSm/fqEZHVokDXaGyp69LJnFb9iByTn6p0RmljR7eodeBTkWu4kU2AkMcfASWRUvngOtYevemxjgtvrYQe/Bu5flpoKtSEb3MAsMiCAJP5+Hv77TgFQX+AVwJVhWbFG10SarSqvKKGnX4YlNHbgXe+t10OXDYB6rZdsx11iuSaLPai3eCmJr2kw98dkKAuxV/S1KCDU7NVDdfsDUkYTxQl4XtZg/rUFeDXGtQbXc5sVeSBt/h4BW/y0hxCys3U7ijg/vWDJngRX2Fss+DrDQ+gfB/ezxRXQqkcXWbmv3/B7MZMtcKFweOZRxaxEw5rrRTtAU7zxiixTr0dvRTOKNeZY7YIqacT7wkkKu/0ht4PQ+BWY7JJjl4Ud8v9l7cQMb72kI5I0pGL/TUbWlvgyZfSrFtjx5HXMmrSzcheKhtQsQD+et6x47yiC8Vgv0v1dDYllZBR7dBgSs6jRnVgZfbl5ghE7G02sAlzzQ== minhtc900@Minhs-MacBook-Air.local"
   }
   os_disk {
     caching           = "ReadWrite"

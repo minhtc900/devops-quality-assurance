@@ -64,7 +64,7 @@ stages:
         command: 'init'
         backendServiceArm: 'azurerm-sc'
         backendAzureRmResourceGroupName: 'terraform-rg'
-        backendAzureRmStorageAccountName: 'tstate22739'
+        backendAzureRmStorageAccountName: 'tstate9776'
         backendAzureRmContainerName: 'tstate'
         backendAzureRmKey: 'terraform.tfstate'
         workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/test'
@@ -307,56 +307,3 @@ stages:
         testResultsFiles: '*.xml'
         mergeTestResults: true
         testRunTitle: 'Publish Newman test results'
-
-- stage: Destroy
-  jobs:
-  - job: destroy_azure_infrastructure
-    displayName: Destroy Azure Infrastructure
-    pool:
-      vmImage: 'ubuntu-18.04'
-    steps:
-    - task: DownloadSecureFile@1
-      name: tfvardef
-      displayName: Download terraform.tfvars
-      inputs:
-        secureFile: 'terraform.tfvars' 
-
-    # Needed for Terraform VM deployment
-    - task: InstallSSHKey@0
-      inputs:
-        knownHostsEntry: 'known_hosts'
-        sshPublicKey: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCn6wutENkms2AHL2UUQcJlh2+qFBZRhYpSZ+tSRERAyedG3n4AtDDrgiNXdAYsuAa2AGWrvrcoYHDdyYXvxsXmVQu1cKgaKMnSqglD2TcZyPLLFr5aJ0BEegGUU9ddSMFUi/UsQ5nbtVm9To6Ke7b496PDBAp4fnorn8QJXEj9GguToKuiZFEpH1mxlunOcTDgkqB/RR+h63XwxO3hwaRs92L0BsqjzAeFA5tUAvG/nXQJ3gx9/FJ6Ny/cVmvyTj45ol7uFpx4EoR1nKyIa1aJrnsvqoSeYJXQQj/6eeaE0rpPE/0GrnZKPfGD0MF/aH8uzr/Rh5ZkZSJTYFL626ZXFHy3+1MDJ2T/YCn12vlP48RaAPgil3m5h8Pajw/RatedIuTH49OKlAdvNnSSoreI7cw+xWhyuSQWYKOKe/btmCJ2IEhSBV35d4r9vRDLgROo1FBUiUH+mIDkWi83bkOMEDo+OgkTU/d+YU8avdty3AE0xuHsry00FKneySRViak= minhtc900@Minhs-MacBook-Air.local'
-        sshKeySecureFile: 'udacity_azure'
-
-    - bash: |
-        cp $(Agent.TempDirectory)/terraform.tfvars $(System.DefaultWorkingDirectory)/terraform/environments/test
-      displayName: Copy terraform.tfvars
-
-    # install Terraform Azure Pipelines Extension by Microsoft DevLabs
-    # https://marketplace.visualstudio.com/items?itemName=ms-devlabs.custom-terraform-tasks
-    - task: ms-devlabs.custom-terraform-tasks.custom-terraform-installer-task.TerraformInstaller@0
-      displayName: Install Terraform
-      inputs:
-        terraformVersion: '0.13.5'
-
-    - task: TerraformTaskV1@0
-      displayName: Terraform Init
-      inputs:
-        provider: 'azurerm'
-        command: 'init'
-        backendServiceArm: 'azurerm-sc'
-        backendAzureRmResourceGroupName: 'terraform-rg'
-        backendAzureRmStorageAccountName: 'tstate22739'
-        backendAzureRmContainerName: 'tstate'
-        backendAzureRmKey: 'terraform.tfstate'
-        workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/test'
-
-    - task: TerraformTaskV1@0
-      displayName: Terraform Destroy
-      inputs:
-        provider: 'azurerm'
-        command: 'destroy'
-        commandOptions: |
-          -auto-approve 
-        workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/test'
-        environmentServiceNameAzureRM: 'azurerm-sc'
